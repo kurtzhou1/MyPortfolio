@@ -1,0 +1,30 @@
+body {
+  // font-family: DFKai-sb;
+}
+.title {
+  background: #e0ffff;
+  color: #1e90ff;
+  border: 1px solid;
+  line-height: 30px;
+}
+
+.number{
+  font-size: 25px;
+  color: #0066FF;
+}
+
+.folder {
+  background: #fff8dc;
+  color: #9999ff;
+  &.open {
+    background: #fff8dc;
+    color: #dda0dd;
+  }
+}
+.folder:before {
+  content: "📁";
+}
+
+.folder.open:before {
+  content: "📂";
+}
