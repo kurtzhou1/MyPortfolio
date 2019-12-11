@@ -1,0 +1,132 @@
+.kurt{
+  &_content{
+    text-align: center;
+    margin: 50px 0 60px 0;
+  }
+  &_name{
+    font-size: 50px;
+    color:black;
+    font-weight: 700;
+  }
+  &_text{
+    font-size:16px;
+    color:#333;
+    line-height: 1.7;
+  }  
+}
+
+.sidebar_left{
+  position: fixed; //HOME文字上下置中
+  max-width: 990px;
+  width: 100%;
+  height: auto;
+  padding: 30px 0;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  top: 0px;
+  z-index: 999;
+  &_navigation{
+    position: relative;
+    margin-left: 30px;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    &:after{
+      position: absolute;
+      content:"";
+      height: 100%;
+      width: 100%;
+      border: 1px solid #ddd;
+      border-radius: 50%;
+      transition: .5s;
+    }
+    &:hover:after{
+      border: 1px solid #555;
+      transform: scale(1.03);
+    }
+    span{
+      height: 5px;
+      width: 5px;
+      position: relative;
+      border-radius: 50%;
+      margin: 0 2px;
+      display: inline-block;
+      &:before{
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: #000;
+        border-radius: 50%;
+        transition: background-color .3s;
+      }
+    }
+  }
+  &_text{
+    position: absolute;
+    top:50%;   //HOME文字上下置中
+    left: 50%;
+    display: inline;
+    text-align:center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 2px;
+    line-height: 1;
+  }
+}
+
+
+.content{
+  margin-top: 150px;
+  width: 100%;
+  &_container{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .main__content_hide{
+    opacity: .2;
+    filter: blur(7px);
+  }
+}
+
+.navigation{
+  position: fixed;
+  max-width: 991px;
+  width: 100% !important;
+  top: 130px;
+  height: calc(100% - 130px);
+  opacity: 0;
+  &.show{
+  z-index: 99;
+  opacity: 1;
+  transition-delay: .45s;
+  transition: .3s;
+  padding: 30px 0;
+  }
+  .nav__label{
+    text-align: center;
+    font-weight: 200;
+  }
+  .nav__label_inner{
+    letter-spacing: 2px;
+    cursor: pointer;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 100;
+    display: inline-block;
+    font-size: 34px;
+    padding: 10px 0;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+}
