@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@react-pdf/renderer": "^2.0.13",
     "@types/react-router": "^5.1.3",
     "node-sass": "^4.13.0",
     "react": "^16.10.2",
